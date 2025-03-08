@@ -1,4 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 import clients from "../assets/Client.svg";
 import employ from "../assets/Employ.svg";
@@ -11,10 +16,21 @@ import Arrow_right from "../assets/Arrow_right.svg";
 import ceo from "../assets/ceo_image.png";
 import Sectors from "./Sectors";
 
-import Recruitment from "../assets/Recruitment.png"
-import placement from "../assets/placement.PNG"
+import recruitment from "../assets/Recruitment.png";
+import placement from "../assets/placement.PNG";
+
+import new_office from "../assets/Inauguration.png";
+
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import Opportunities from "./Opportunities";
+import Learn_more from "./Learn_more";
+import Insights from "./Insights";
+import SocialHub from "./SocialHub";
 
 const Body = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <section className="body_container">
       {/* -----introduction section ------- */}
@@ -31,7 +47,7 @@ const Body = () => {
           </div>
           <div className="intro_top_right">
             <h2>
-              We build leading edge infrastructure within your organisation
+              WE BUILD LEADING EDGE INFRASTRUCTURE WITHIN YOUR ORGANISATION
             </h2>
             <p>
               Parisima enables clients to improve their performance through
@@ -46,9 +62,9 @@ const Body = () => {
               your needs.
             </p>
             <div>
-              <p>
+              <button className="custom_button">
                 Get Started <img src={Arrow_right} alt="" />
-              </p>
+              </button>
             </div>
           </div>
         </div>
@@ -121,20 +137,66 @@ const Body = () => {
           </div>
         </div>
         <div className="work_right">
-          <div className="work_slider_container">
-          <img src={Recruitment} alt="" />
-          </div>
-          {/* <img src={placement} alt="" /> */}
+          <Swiper
+            modules={[Navigation]} // Enable navigation module
+            slidesPerView={2} // Show one image at a time
+            loop={true} // Infinite loop
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }}
+            className="work_slider_container"
+          >
+            <SwiperSlide>
+              <img src={recruitment} alt="Recruitment" />
+              <h2>Recruitment Process Outsourcing (RPO)</h2>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={placement} alt="Placement" />
+              <h2>Permanent placement</h2>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={recruitment} alt="Placement" />
+              <h2>Recruitment Process Outsourcing (RPO)</h2>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={placement} alt="Placement" />
+              <h2>Permanent placement</h2>
+            </SwiperSlide>
+          </Swiper>
         </div>
-        <div className="work_right">
-          <div className="work_slider_container">
-          <img src={placement} alt="" />
+
+        <div className="arrow_container">
+          <div className="arrow" ref={prevRef}>
+            <MdOutlineKeyboardArrowLeft />
           </div>
-          {/* <img src={placement} alt="" /> */}
+          <div className="arrow" ref={nextRef}>
+            <MdKeyboardArrowRight />
+          </div>
         </div>
       </div>
 
       <Sectors />
+      <Opportunities />
+
+      <section className="new_office_container">
+        <div className="new_office_image_container">
+          <img src={new_office} alt="" />
+        </div>
+        <div className="new_office_text_container">
+          <h4>
+            Parisima Talent continues GCC expansion with new office in KSA
+          </h4>
+        </div>
+      </section>
+
+      <Insights />
+      <Learn_more />
+      <SocialHub />
     </section>
   );
 };
