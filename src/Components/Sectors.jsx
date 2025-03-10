@@ -33,11 +33,13 @@ const Sectors = () => {
             <img src={fly} alt="" />
           </div>
           <h3>AVIATION</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
+          <div className="sector_card_para_container">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
           <div className="sector_button_container">
             <button className="custom_button">
               Learn More
@@ -50,11 +52,13 @@ const Sectors = () => {
             <img src={telecom} alt="" />
           </div>
           <h3>IT AND TELECOMS</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
+          <div className="sector_card_para_container">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
           <div className="sector_button_container">
             <button className="custom_button">
               Learn More
@@ -67,11 +71,13 @@ const Sectors = () => {
             <img src={digital} alt="" />
           </div>
           <h3>DIGITAL</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
+          <div className="sector_card_para_container">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
           <div className="sector_button_container">
             <button className="custom_button">
               Learn More
@@ -84,11 +90,13 @@ const Sectors = () => {
             <img src={calendar} alt="" />
           </div>
           <h3>EVENT MANAGEMENT</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
+          <div className="sector_card_para_container">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
           <div className="sector_button_container">
             <button className="custom_button">
               Learn More

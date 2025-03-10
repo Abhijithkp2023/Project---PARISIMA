@@ -1,6 +1,6 @@
 import React from "react";
 import map from "../assets/Map.png";
-import arrow_right from "../assets/Arrow_right.svg";
+import arrow_right_white from "../assets/Arrow_right_white.svg";
 
 const Opportunities = () => {
   return (
@@ -12,7 +12,7 @@ const Opportunities = () => {
           eiusmod tempor <br /> incididunt ut labore et dolored exercitation
         </p>
         <button className="custom_button_cyan">
-          EXPLORE OPPORTUNITIES <img src={arrow_right} alt="" />
+          EXPLORE OPPORTUNITIES <img src={arrow_right_white} alt="" />
         </button>
         <div className="opportunities_image_container">
           <img src={map} alt="" />
