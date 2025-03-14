@@ -56,19 +56,21 @@ const Header = () => {
   return (
     <header className="header_container">
       <div className="header_sub_container">
+        <div className="gradient_container"></div>
         <div className="clouds">
           <img src={cloud} style={{ "--i": 1 }} alt="" />
-          {/* <img src={cloud} style={{ "--i": 2 }} alt="" />
-        <img src={cloud} style={{ "--i": 3 }} alt="" />
+          <img src={cloud} style={{ "--i": 2 }} alt="" />
+          {/* <img src={cloud} style={{ "--i": 3 }} alt="" />
         <img src={cloud} style={{ "--i": 4 }} alt="" />
         <img src={cloud} style={{ "--i": 5 }} alt="" />
         <img src={cloud} style={{ "--i": 6 }} alt="" />
         <img src={cloud} style={{ "--i": 7 }} alt="" />
         <img src={cloud} style={{ "--i": 8 }} alt="" /> */}
         </div>
-        <div className="container">
-          <div className="nav_container">
+        <div className="wrapper">
+          {/* <div className="nav_container"> */}
             <nav className="nav">
+
               <div className="nav_top">
                 <div className="nav_top_left_icons">
                   <ul>
@@ -102,30 +104,35 @@ const Header = () => {
                   <div className="job_register">
                     <a href="">
                       <img src={register} alt="" />
-                      <p>Register your Job</p>
+                      <p>REGISTER YOUR JOB</p>
                     </a>
                   </div>
                   <div className="cv_register">
                     <a href="">
                       <img src={user} alt="" />
-                      <p>Register your CV</p>
+                      <p>REGISTER YOUR CV</p>
                     </a>
                   </div>
                 </div>
               </div>
 
+              <div className="logo_container">
+                <img src={logo} alt="" />
+              </div>
+
               <div className="nav_bottom">
-                <div className="logo_container">
-                  <img src={logo} alt="" />
-                </div>
                 <div className="hamburger_container">
                   <RiMenu2Fill size={30} />
                 </div>
+
                 <div className="nav_links">
                   <ul className="nav_ul">
                     <li className="nav_li">
                       <a href="" className="nav_link">
-                        ABOUT US <IoIosArrowDown />
+                        <div className="link">
+                          <p>ABOUT US </p>
+                          <IoIosArrowDown />
+                        </div>
                         <div className="dropdown_menu">
                           <ul>
                             <li>
@@ -140,7 +147,10 @@ const Header = () => {
                     </li>
                     <li className="nav_li">
                       <a href="" className="nav_link">
-                        OUR SERVICES <IoIosArrowDown />
+                        <div className="link">
+                          <p>OUR SERVICES </p>
+                          <IoIosArrowDown />
+                        </div>
                         <div className="dropdown_menu">
                           <ul>
                             <li>
@@ -155,14 +165,17 @@ const Header = () => {
                     </li>
                     <li className="nav_li">
                       <a href="" className="nav_link">
-                        FOR CANDIDATES <IoIosArrowDown />
+                        <div className="link">
+                          <p>FOR CANDIDATES </p>
+                          <IoIosArrowDown />
+                        </div>
                         <div className="dropdown_menu">
                           <ul>
                             <li>
-                              <a href="#">candidate 1</a>
+                              <a href="#">Candidate 1</a>
                             </li>
                             <li>
-                              <a href="#">candidate 2</a>
+                              <a href="#">Candidate 2</a>
                             </li>
                           </ul>
                         </div>
@@ -170,7 +183,10 @@ const Header = () => {
                     </li>
                     <li className="nav_li">
                       <a href="" className="nav_link">
-                        OUR EXPERTISE <IoIosArrowDown />
+                        <div className="link">
+                          <p>OUR EXPERTISE </p>
+                          <IoIosArrowDown />
+                        </div>
                         <div className="dropdown_menu">
                           <ul>
                             <li>
@@ -192,43 +208,44 @@ const Header = () => {
                     <li className="nav_li">
                       <a href="">CONTACT US </a>
                     </li>
-                    <li>|</li>
                     <li className="nav_li">
                       <a href="">عربي</a>
                     </li>
                   </ul>
                 </div>
               </div>
+              
             </nav>
+          {/* </div> */}
+        </div>
+
+        <div className="wrapper">
+          <div className="hero_text_container">
+            <Swiper
+              direction="vertical"
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              slidesPerView={1}
+              loop={true}
+              spaceBetween={50}
+              className="hero_text_swiper"
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index} className="hero_text">
+                  <div className="text_container">
+                    <h1>{slide.title}</h1>
+                    <p>{slide.text}</p>
+                    <div className="hero_button">
+                      GET STARTED <img src={Arrow_right} alt="" />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
 
-        <div className="hero_text_container">
-          <Swiper
-            direction="vertical"
-            pagination={{ clickable: true }}
-            modules={[Pagination]}
-            slidesPerView={1}
-            loop={true}
-            spaceBetween={50}
-            className="hero_text_swiper"
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index} className="hero_text">
-                <div className="text_container">
-                  <h1>{slide.title}</h1>
-                  <p>{slide.text}</p>
-                  <div className="hero_button">
-                    GET STARTED <img src={Arrow_right} alt="" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-        <div className="gradient_container">
-        </div>
+        
 
         {/* <div className="hero_image">
         <img src={hero_image} alt="" />

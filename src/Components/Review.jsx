@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import review_1 from "../assets/Review_1.png";
 import review_2 from "../assets/Review_2.png";
 import review_3 from "../assets/Review_3.png";
@@ -17,8 +17,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Review = () => {
+  // const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: "ease-in-out",
+      offset: 100,
+    });
+  }, []);
 
   const reviews = [
     {
@@ -48,80 +61,84 @@ const Review = () => {
   ];
 
   return (
-    <div className="review_container">
-      <h3>WHAT OUR CLIENTS SAY ABOUT US</h3>
-      <div className="review_card_container">
-        <div className="review_card_container_left">
-          <h4>
-            WHAT OUR CLIENTS SAY <br /> ABOUT US
-          </h4>
-          <p className="review">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-            sagittis nunc sit amet nisl blandit, nec aliquam nisi eleifend.
-            Proin vel odio eu sem placerat lacinia ut non nisi. Nam maximus nunc
-            ac nisl hendrerit, sit amet mollis nisi molestie. Nulla vel nibh
-            eget lectus suscipit iaculis.
-          </p>
-          <div className="image_container">
-            <div className="image">
-              <img src={review_1} alt="" />
-            </div>
-            <div className="image">
-              <img src={review_2} alt="" />
-            </div>
-            <div className="image">
-              <img src={review_3} alt="" />
-            </div>
-            <div className="image">
-              <img src={review_4} alt="" />
-            </div>
-          </div>
-          <div className="review_count_container">
-            <img src={star} alt="" />
-            <p>
-              5.0 <span className="fade_font">(5000 reviews)</span>
+    <div className="wrapper">
+      <div className="review_container" data-aos="fade-up">
+        <h3>WHAT OUR CLIENTS SAY ABOUT US</h3>
+
+        <div className="review_card_container">
+          <div className="review_card_container_left" data-aos="fade-up">
+            <h4>WHAT OUR CLIENTS SAY ABOUT US</h4>
+            <p className="review">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              sagittis nunc sit amet nisl blandit, nec aliquam nisi eleifend.
+              Proin vel odio eu sem placerat lacinia ut non nisi. Nam maximus
+              nunc ac nisl hendrerit, sit amet mollis nisi molestie. Nulla vel
+              nibh eget lectus suscipit iaculis.
             </p>
+            <div className="image_container">
+              <div className="image">
+                <img src={review_1} alt="" />
+              </div>
+              <div className="image">
+                <img src={review_2} alt="" />
+              </div>
+              <div className="image">
+                <img src={review_3} alt="" />
+              </div>
+              <div className="image">
+                <img src={review_4} alt="" />
+              </div>
+            </div>
+            <div className="review_count_container">
+              <img src={star} alt="" />
+              <p>
+                5.0 <span className="fade_font">(5000 reviews)</span>
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="review_card_container_right">
-          <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            loop={true}
-            slidesPerView={1}
-            direction="vertical" 
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            className="review_slider_container"
-            spaceBetween={100}
-          >
-            {reviews.map((item, index) => (
-              <SwiperSlide key={index} className="slider">
-                <div className="reviewer_image">
-                  <img src={item.image} alt="" />
-                </div>
-                <p className="review">{item.review}</p>
-                <div className="star_container">
-                  <img src={star} alt="" />
-                  <img src={star} alt="" />
-                  <img src={star} alt="" />
-                  <img src={star} alt="" />
-                  <img src={star} alt="" />
-                </div>
-                <h5>{item.reviewer}</h5>
-                <div className="overlap_review"></div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="review_card_container_right" data-aos="fade-up">
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              loop={true}
+              slidesPerView={1}
+              direction="vertical"
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+              className="review_slider_container"
+              spaceBetween={500}
+              speed={1000}
+            >
+              {reviews.map((item, index) => (
+                <SwiperSlide key={index} className="slider">
+                  <div className="reviewer_image">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <div className="right_review_container">
+                    <p className="review">{item.review}</p>
+                    <div className="star_container">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="Star" />
+                      ))}
+                    </div>
+                    <h5>{item.reviewer}</h5>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-          <div className="review_swiper_button_container_left">
-            <button onClick={() => swiperRef.current?.slidePrev()}>
-              <MdOutlineKeyboardArrowLeft />
-            </button>
-          </div>
-          <div className="review_swiper_button_container_right">
-            <button onClick={() => swiperRef.current?.slideNext()}>
-              <MdKeyboardArrowRight />
-            </button>
+            <div className="overlap_review"></div>
+
+            <div className="review_swiper_button_container_left">
+              <button onClick={() => swiperRef.current?.slidePrev()}>
+                <MdOutlineKeyboardArrowLeft />
+              </button>
+            </div>
+            <div className="review_swiper_button_container_right">
+              <button onClick={() => swiperRef.current?.slideNext()}>
+                <MdKeyboardArrowRight />
+              </button>
+            </div>
           </div>
         </div>
       </div>
