@@ -54,13 +54,13 @@ const SocialHub = () => {
         className="swiper_container"
         spaceBetween={50}
         breakpoints={{
-          1200: { slidesPerView: 5 },
+          1400: { slidesPerView: 5 },
           1100: { slidesPerView: 4 },
           900: { slidesPerView: 3.5 },
           700: { slidesPerView: 3 },
-          500: { slidesPerView: 2.5, loop: false },
-          400: { slidesPerView: 2, loop: false },
-          290: { slidesPerView: 1.1, loop: false },
+          550: { slidesPerView: 2.5, loop: false },
+          400: { slidesPerView: 1.7, loop: false },
+          290: { slidesPerView: 1, loop: true },
         }}
       >
         {socials.map((slide, index) => {

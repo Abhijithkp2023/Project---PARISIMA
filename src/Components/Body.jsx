@@ -51,11 +51,16 @@ const Body = () => {
 
   return (
     <section className="body_container">
+
       <section className="intro">
+
         <div className="intro_container">
           <div className="wrapper">
+
             <div className="intro_sub_container">
+
               <div className="intro_top">
+
                 <div className="intro_top_left">
                   <div className="image_one_container" data-aos="fade-up">
                     <img src={building} alt="" />
@@ -92,11 +97,12 @@ const Body = () => {
               </div>
 
               <div className="intro_middle" ref={ref}>
+
                 <div className="counter counter_start">
                   <div className="counter_image_container">
                     <img src={clients} alt="Clients" />
                   </div>
-                  <div>
+                  <div className="counter_text_container">
                     <p>Clients</p>
                     <h2>
                       {inView && (
@@ -106,11 +112,12 @@ const Body = () => {
                     </h2>
                   </div>
                 </div>
+
                 <div className="counter counter_middle">
                   <div className="counter_image_container">
                     <img src={employ} alt="Clients" />
                   </div>
-                  <div>
+                  <div className="counter_text_container">
                     <p>Employees</p>
                     <h2>
                       {inView && (
@@ -120,20 +127,21 @@ const Body = () => {
                     </h2>
                   </div>
                 </div>
+
                 <div className="counter counter_end">
                   <div className="counter_image_container">
                     <img src={thumb} alt="Clients" />
                   </div>
-                  <div>
+                  <div className="counter_text_container">
                     <p>Years of Experience</p>
                     <h2>
                       {inView && <CountUp start={50} end={80} duration={3} />}+
                     </h2>
                   </div>
                 </div>
-              </div>
 
-              <div className="intro_bottom_container" data-aos="fade-up"></div>
+              </div>
+              {/* <div className="intro_bottom_container" data-aos="fade-up"></div> */}
             </div>
           </div>
         </div>
@@ -165,12 +173,14 @@ const Body = () => {
       <Sectors />
       <Opportunities />
 
-      <section className="new_office_container wrapper" data-aos="fade-up">
+      <section className="new_office_container" data-aos="fade-up">
+        <div className="wrapper new_office_wrapper_container"> 
         <div className="new_office_sub_container"></div>
         <div className="new_office_text_container">
             <h4>
               Parisima Talent continues GCC expansion with new office in KSA
             </h4>
+          </div>
           </div>
       </section>
 

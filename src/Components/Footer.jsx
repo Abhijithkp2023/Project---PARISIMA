@@ -36,7 +36,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="social_media_container">
-                <h3>CONNECT WITH US</h3>
+                <h3 className="links_heading">CONNECT WITH US</h3>
                 <div className="social_media">
                   <img src={linkedin} alt="" />
                   <img src={instagram} alt="" />
