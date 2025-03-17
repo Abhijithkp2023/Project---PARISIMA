@@ -17,9 +17,6 @@ const Opportunities = () => {
 
   return (
     <div className="wrapper opportunities_main_container">
-      {/* data-aos="zoom-in-down" */}
-      {/* <div className="opportunities_sub_container"> */}
-
       <div className="opportunities_text_container" data-aos="fade-up">
         <h2>OPPORTUNITIES ACROSS THE GCC REGION</h2>
         <p className="opportunities_para">

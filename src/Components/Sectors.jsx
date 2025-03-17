@@ -26,6 +26,7 @@ const Sectors = () => {
       <div className="wrapper">
         <div className="sector_sub_container">
           <div className="sectors_top" data-aos="fade-up">
+            {/* data-aos="fade-up" */}
             <div className="sectors_top_left">
               <h2>SECTORS</h2>
               <p className="sector_para">
@@ -34,6 +35,12 @@ const Sectors = () => {
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
               </p>
+
+              <button className="sector_button for_small_device">
+                <p className="sector_button_para">VIEW ALL</p>
+                <img src={Arrow_right} alt="" />
+              </button>
+              
             </div>
             <div className="sector_button top_button">
               <p className="sector_button_para">VIEW ALL</p>
@@ -41,8 +48,9 @@ const Sectors = () => {
             </div>
           </div>
 
-          <div className="sectors_bottom" >
+          <div className="sectors_bottom">
             <div className="sector_card" data-aos="fade-up">
+              {/* data-aos="fade-up" */}
               <div className="pentagon">
                 <img src={pentagon} alt="" />
                 <div className="sector_icon">
@@ -63,6 +71,7 @@ const Sectors = () => {
               </div>
             </div>
             <div className="sector_card" data-aos="fade-up">
+              {/* data-aos="fade-up" */}
               <div className="pentagon">
                 <img src={pentagon} alt="" />
                 <div className="sector_icon">
@@ -83,6 +92,7 @@ const Sectors = () => {
               </div>
             </div>
             <div className="sector_card" data-aos="fade-up">
+              {/* data-aos="fade-up" */}
               <div className="pentagon">
                 <img src={pentagon} alt="" />
                 <div className="sector_icon">
@@ -97,12 +107,13 @@ const Sectors = () => {
                   standard dummy text ever since the 1500s.
                 </p>
               </div>
-              <div className="sector_button">
+              <div className="sector_button" data-aos="fade-up">
                 <p className="sector_button_para">LEARN MORE</p>
                 <img src={Arrow_right} alt="" />
               </div>
             </div>
             <div className="sector_card" data-aos="fade-up">
+              {/* data-aos="fade-up" */}
               <div className="pentagon">
                 <img src={pentagon} alt="" />
                 <div className="sector_icon">

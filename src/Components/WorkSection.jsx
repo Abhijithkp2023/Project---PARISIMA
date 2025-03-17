@@ -59,7 +59,13 @@ const WorkSection = () => {
           0: {
             slidesPerView: 1,
           },
-          690: {
+          590: {
+            slidesPerView: 1.3,
+          },
+          890: {
+            slidesPerView: 1.5,
+          },
+          1090: {
             slidesPerView: 2,
           },
         }}

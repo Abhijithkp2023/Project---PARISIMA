@@ -57,6 +57,7 @@ const Header = () => {
     <header className="header_container">
       <div className="header_sub_container">
         <div className="gradient_container"></div>
+
         <div className="clouds">
           <img src={cloud} style={{ "--i": 1 }} alt="" />
           <img src={cloud} style={{ "--i": 2 }} alt="" />
@@ -67,6 +68,7 @@ const Header = () => {
         <img src={cloud} style={{ "--i": 7 }} alt="" />
         <img src={cloud} style={{ "--i": 8 }} alt="" /> */}
         </div>
+
         <div className="wrapper">
           {/* <div className="nav_container"> */}
             <nav className="nav">
@@ -122,7 +124,7 @@ const Header = () => {
 
               <div className="nav_bottom">
                 <div className="hamburger_container">
-                  <RiMenu2Fill size={30} />
+                  <RiMenu2Fill size={40} />
                 </div>
 
                 <div className="nav_links">
@@ -213,6 +215,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </div>
+
               </div>
               
             </nav>
@@ -229,6 +232,14 @@ const Header = () => {
               loop={true}
               spaceBetween={50}
               className="hero_text_swiper"
+              breakpoints={{
+                768: {
+                  direction: "vertical",
+                },
+                0: {
+                  direction: "horizontal",
+                },
+              }}
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index} className="hero_text">

@@ -66,6 +66,7 @@ const Review = () => {
         <h3>WHAT OUR CLIENTS SAY ABOUT US</h3>
 
         <div className="review_card_container">
+          
           <div className="review_card_container_left" data-aos="fade-up">
             <h4>WHAT OUR CLIENTS SAY ABOUT US</h4>
             <p className="review">
