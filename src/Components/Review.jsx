@@ -105,13 +105,12 @@ const Review = () => {
               slidesPerView={1}
               direction="vertical"
               onSwiper={(swiper) => (swiperRef.current = swiper)}
-              // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
               className="review_slider_container"
               spaceBetween={500}
               speed={1000}
             >
               {reviews.map((item, index) => (
-                <SwiperSlide key={index} className="slider">
+                <SwiperSlide key={index} className="review_slider">
                   <div className="reviewer_image">
                     <img src={item.image} alt="" />
                   </div>

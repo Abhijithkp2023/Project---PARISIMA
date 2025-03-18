@@ -19,7 +19,7 @@ const Insights = () => {
   }, []);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper insight_wrapper">
       <div className="insight_container">
         <div className="insight_text">
           <h2>INSIGHTS</h2>
