@@ -36,6 +36,8 @@ import WorkSection from "./WorkSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
+
 const Body = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
@@ -51,16 +53,12 @@ const Body = () => {
 
   return (
     <section className="body_container">
-
+      
       <section className="intro">
-
         <div className="intro_container">
           <div className="wrapper">
-
             <div className="intro_sub_container">
-
               <div className="intro_top">
-
                 <div className="intro_top_left">
                   <div className="image_one_container" data-aos="fade-up">
                     <img src={building} alt="" />
@@ -89,15 +87,27 @@ const Body = () => {
                     and Assessment Centres, Parisima has the capability to
                     create a unique solution to meet your needs.
                   </p>
-                  <div className="intro_button">
+                  {/* <div className="intro_button">
                     <p className="intro_button_para">LEARN MORE</p>
                     <img src={Arrow_right} alt="" />
-                  </div>
+                  </div> */}
+                  <button className="White_arrow_button">
+                    <p className="white_button_para">LEARN MORE </p>
+                    <div className="button_img_container">
+                      <img
+                        className="button_img button_img_1"
+                        src={Arrow_right}
+                      />
+                      <img
+                        className="button_img button_img_2"
+                        src={Arrow_right}
+                      />
+                    </div>
+                  </button>
                 </div>
               </div>
 
               <div className="intro_middle" ref={ref}>
-
                 <div className="counter counter_start">
                   <div className="counter_image_container">
                     <img src={clients} alt="Clients" />
@@ -139,7 +149,6 @@ const Body = () => {
                     </h2>
                   </div>
                 </div>
-
               </div>
               {/* <div className="intro_bottom_container" data-aos="fade-up"></div> */}
             </div>
@@ -174,14 +183,14 @@ const Body = () => {
       <Opportunities />
 
       <section className="new_office_container" data-aos="fade-up">
-        <div className="wrapper new_office_wrapper_container"> 
-        <div className="new_office_sub_container"></div>
-        <div className="new_office_text_container">
+        <div className="wrapper new_office_wrapper_container">
+          <div className="new_office_sub_container"></div>
+          <div className="new_office_text_container">
             <h4>
               Parisima Talent continues GCC expansion with new office in KSA
             </h4>
           </div>
-          </div>
+        </div>
       </section>
 
       {/* <div className="new_office_image_container"> */}

@@ -23,10 +23,17 @@ const Opportunities = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor <br /> incididunt ut labore et dolored exercitation
         </p>
-        <div className="opportunities_button">
+        {/* <div className="opportunities_button">
           <p>EXPLORE OPPORTUNITIES </p>
           <img src={arrow_right_white} alt="" />
-        </div>
+        </div> */}
+        <button className="cyan_arrow_button">
+          <p className="cyan_button_para">EXPLORE OPPORTUNITIES</p>
+          <div className="button_img_container">
+            <img className="button_img button_img_1" src={arrow_right_white} />
+            <img className="button_img button_img_2" src={arrow_right_white} />
+          </div>
+        </button>
       </div>
 
       <div className="opportunities_bottom" data-aos="fade-up">

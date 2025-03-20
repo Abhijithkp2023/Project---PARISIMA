@@ -114,8 +114,14 @@ const Review = () => {
                   <div className="reviewer_image">
                     <img src={item.image} alt="" />
                   </div>
+
+
+                  <div className="quote_container">
+                    <img src={quotation} alt="" />
+                  </div>
+
                   <div className="right_review_container">
-                    <p className="review">{item.review}</p>
+                    <p className="review individual_review">{item.review}</p>
                     <div className="star_container">
                       {[...Array(5)].map((_, i) => (
                         <img key={i} src={star} alt="Star" />

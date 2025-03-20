@@ -72,16 +72,32 @@ const Insights = () => {
             <div className="insight_image_overlay_text">
               <p>12 July, 2022</p>
               <h4>
-              Delivering Recruitment Process Outsourcing (RPO) solutions across EMEA
+                Delivering Recruitment Process Outsourcing (RPO) solutions
+                across EMEA
               </h4>
             </div>
           </div>
         </div>
 
-        <div className="insights_button">
+        {/* <div className="insights_button">
           <p>VIEW ALL </p>
           <img src={arrow_right_white} alt="" />
-          {/* <img src={arrow_right_white} alt="" /> */}
+          <img src={arrow_right_white} alt="" />
+        </div> */}
+        <div className="insights_button_container">
+          <button className="cyan_arrow_button insights_button">
+            <p className="cyan_button_para">Explore</p>
+            <div className="button_img_container">
+              <img
+                className="button_img button_img_1"
+                src={arrow_right_white}
+              />
+              <img
+                className="button_img button_img_2"
+                src={arrow_right_white}
+              />
+            </div>
+          </button>
         </div>
       </div>
     </div>

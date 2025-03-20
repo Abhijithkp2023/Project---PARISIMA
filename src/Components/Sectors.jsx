@@ -36,16 +36,31 @@ const Sectors = () => {
                 text ever since the 1500s.
               </p>
 
-              <button className="sector_button for_small_device">
+              {/* <button className="sector_button for_small_device">
                 <p className="sector_button_para">VIEW ALL</p>
                 <img src={Arrow_right} alt="" />
+              </button> */}
+
+              <button className="White_arrow_button sector_button_small_device">
+                <p className="white_button_para">VIEW ALL</p>
+                <div className="button_img_container">
+                  <img className="button_img button_img_1" src={Arrow_right} />
+                  <img className="button_img button_img_2" src={Arrow_right} />
+                </div>
               </button>
-              
             </div>
-            <div className="sector_button top_button">
+
+            {/* <div className="sector_button top_button">
               <p className="sector_button_para">VIEW ALL</p>
               <img src={Arrow_right} alt="" />
-            </div>
+            </div> */}
+            <button className="White_arrow_button sector_top_button">
+              <p className="white_button_para">VIEW ALL</p>
+              <div className="button_img_container">
+                <img className="button_img button_img_1" src={Arrow_right} />
+                <img className="button_img button_img_2" src={Arrow_right} />
+              </div>
+            </button>
           </div>
 
           <div className="sectors_bottom">
@@ -65,10 +80,13 @@ const Sectors = () => {
                   standard dummy text ever since the 1500s.
                 </p>
               </div>
-              <div className="sector_button">
-                <p className="sector_button_para">LEARN MORE</p>
-                <img src={Arrow_right} alt="" />
-              </div>
+              <button className="White_arrow_button">
+                <p className="white_button_para">GET STARTED </p>
+                <div className="button_img_container">
+                  <img className="button_img button_img_1" src={Arrow_right} />
+                  <img className="button_img button_img_2" src={Arrow_right} />
+                </div>
+              </button>
             </div>
             <div className="sector_card" data-aos="fade-up">
               {/* data-aos="fade-up" */}
@@ -86,10 +104,13 @@ const Sectors = () => {
                   standard dummy text ever since the 1500s.
                 </p>
               </div>
-              <div className="sector_button">
-                <p className="sector_button_para">LEARN MORE</p>
-                <img src={Arrow_right} alt="" />
-              </div>
+              <button className="White_arrow_button">
+                <p className="white_button_para">GET STARTED </p>
+                <div className="button_img_container">
+                  <img className="button_img button_img_1" src={Arrow_right} />
+                  <img className="button_img button_img_2" src={Arrow_right} />
+                </div>
+              </button>
             </div>
             <div className="sector_card" data-aos="fade-up">
               {/* data-aos="fade-up" */}
@@ -107,10 +128,13 @@ const Sectors = () => {
                   standard dummy text ever since the 1500s.
                 </p>
               </div>
-              <div className="sector_button" data-aos="fade-up">
-                <p className="sector_button_para">LEARN MORE</p>
-                <img src={Arrow_right} alt="" />
-              </div>
+              <button className="White_arrow_button">
+                <p className="white_button_para">GET STARTED </p>
+                <div className="button_img_container">
+                  <img className="button_img button_img_1" src={Arrow_right} />
+                  <img className="button_img button_img_2" src={Arrow_right} />
+                </div>
+              </button>
             </div>
             <div className="sector_card" data-aos="fade-up">
               {/* data-aos="fade-up" */}
@@ -128,10 +152,13 @@ const Sectors = () => {
                   standard dummy text ever since the 1500s.
                 </p>
               </div>
-              <div className="sector_button">
-                <p className="sector_button_para">LEARN MORE</p>
-                <img src={Arrow_right} alt="" />
-              </div>
+              <button className="White_arrow_button">
+                <p className="white_button_para">GET STARTED </p>
+                <div className="button_img_container">
+                  <img className="button_img button_img_1" src={Arrow_right} />
+                  <img className="button_img button_img_2" src={Arrow_right} />
+                </div>
+              </button>
             </div>
           </div>
         </div>

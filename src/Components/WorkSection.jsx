@@ -32,88 +32,103 @@ const WorkSection = () => {
   }, []);
 
   return (
-    <div className="work_section">
-      <div className="work_left" data-aos="fade-up">
-        <h2>How We Work</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          porttitor sollicitudin est. Praesent id nibh mi. Aliquam commodo
-          tellus sit amet libero volutpat scelerisque. Quisque eu blandit
-          turpis, in porttitor purus. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nunc mattis vitae mauris sed pharetra. Vivamus non ex
-          suscipit, blandit lacus id, hendrerit nisi.
-        </p>
-        <div className="work_left_button">
+    <div className = "work_section_container">
+      <div className="work_section">
+        <div className="work_left" data-aos="fade-up">
+          <h2>How We Work</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porttitor sollicitudin est. Praesent id nibh mi. Aliquam commodo
+            tellus sit amet libero volutpat scelerisque. Quisque eu blandit
+            turpis, in porttitor purus. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nunc mattis vitae mauris sed pharetra. Vivamus non
+            ex suscipit, blandit lacus id, hendrerit nisi.
+          </p>
+          {/* <div className="work_left_button">
           <p>Explore</p>
           <img src={Arrow_right_white} alt="" />
+        </div> */}
+          <button className="cyan_arrow_button">
+            <p className="cyan_button_para">Explore</p>
+            <div className="button_img_container">
+              <img
+                className="button_img button_img_1"
+                src={Arrow_right_white}
+              />
+              <img
+                className="button_img button_img_2"
+                src={Arrow_right_white}
+              />
+            </div>
+          </button>
         </div>
-      </div>
 
-      {/* <div className="work_right" data-aos="zoom-in"> */}
-      <Swiper
-        modules={[Navigation]}
-        slidesPerView={"auto"}
-        loop={true}
-        spaceBetween={30}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          590: {
-            slidesPerView: 1.3,
-          },
-          890: {
-            slidesPerView: 1.5,
-          },
-          1090: {
-            slidesPerView: 2,
-          },
-        }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-        // speed={1000}
-        className="work_right"
-        data-aos="fade-up"
-      >
-        <SwiperSlide className="slides" data-aos="fade-up">
-          <div className="slide_image_container">
-            <img src={recruitment} alt="Recruitment" />
-          </div>
-          <h2>Recruitment Process Outsourcing (RPO)</h2>
-        </SwiperSlide>
-        <SwiperSlide className="slides">
-          <div className="slide_image_container">
-            <img src={placement} alt="Recruitment" />
-          </div>
-          <h2>Permanent placement</h2>
-        </SwiperSlide>
-        <SwiperSlide className="slides">
-          <div className="slide_image_container">
-            <img src={recruitment} alt="Recruitment" />
-          </div>
-          <h2>Recruitment Process Outsourcing (RPO)</h2>
-        </SwiperSlide>
-        <SwiperSlide className="slides">
-          <div className="slide_image_container">
-            <img src={placement} alt="Recruitment" />
-          </div>
-          <h2>Permanent placement</h2>
-        </SwiperSlide>
-      </Swiper>
-      {/* </div> */}
+        {/* <div className="work_right" data-aos="zoom-in"> */}
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={"auto"}
+          loop={true}
+          spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            // 590: {
+            //   slidesPerView: 1.3,
+            // },
+            // 768: {
+            //   slidesPerView: 2,
+            // },
+            690: {
+              slidesPerView: 2,
+            },
+          }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          // speed={1000}
+          className="work_right"
+          data-aos="fade-up"
+        >
+          <SwiperSlide className="slides" data-aos="fade-up">
+            <div className="slide_image_container">
+              <img src={recruitment} alt="Recruitment" />
+            </div>
+            <h2>Recruitment Process Outsourcing (RPO)</h2>
+          </SwiperSlide>
+          <SwiperSlide className="slides">
+            <div className="slide_image_container">
+              <img src={placement} alt="Recruitment" />
+            </div>
+            <h2>Permanent placement</h2>
+          </SwiperSlide>
+          <SwiperSlide className="slides">
+            <div className="slide_image_container">
+              <img src={recruitment} alt="Recruitment" />
+            </div>
+            <h2>Recruitment Process Outsourcing (RPO)</h2>
+          </SwiperSlide>
+          <SwiperSlide className="slides">
+            <div className="slide_image_container">
+              <img src={placement} alt="Recruitment" />
+            </div>
+            <h2>Permanent placement</h2>
+          </SwiperSlide>
+        </Swiper>
+        {/* </div> */}
 
-      <div className="arrow_container">
-        <div className="arrow" ref={prevRef}>
-          <img src={arrow_left} alt="" />
-        </div>
-        <div className="arrow" ref={nextRef}>
-          <img src={arrow_right} alt="" />
+        <div className="arrow_container">
+          <div className="arrow" ref={prevRef}>
+            <img src={arrow_left} alt="" />
+          </div>
+          <div className="arrow" ref={nextRef}>
+            <img src={arrow_right} alt="" />
+          </div>
         </div>
       </div>
     </div>
